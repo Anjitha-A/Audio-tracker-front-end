@@ -1,0 +1,37 @@
+<form [formGroup]="myForm">
+	<div class="container-fluid d-flex justify-content-center vh-100">
+		<div class="d-flex flex-column justify-content-between">
+			<div class="card mt-5 p-5">
+				<div class="logo mb-3"></div>
+				<div>
+					<h4 class="mb-5 text-white">Register Here...</h4>
+				</div>
+				<a routerLink="/login">
+					<button class="btn btn-primary btn-lg"><small>Already Have an accont?..</small><span>&nbsp;Sign
+						In</span></button>
+				</a>
+			</div>
+			<div class="card two bg-white px-5 py-4 mb-3">
+				<div class="form-group text-danger">
+					<input type="email" formControlName="email" class="form-control" id="email" required>
+					<label class="form-control-placeholder text-dark" for="email">Email Id</label>
+					<span *ngIf="isValid('email')">Enter a valid email Id</span>
+				</div>
+				<div class="form-group  text-danger">
+					<input type="text" formControlName="username" class="form-control" id="username" required minlength="4">
+					<label class="form-control-placeholder  text-dark" for="username">User Name</label>
+					<span *ngIf="isValid('username')">Username is required</span>
+				</div>
+				<div class="form-group  text-danger">
+					<input type="password" formControlName="password" class="form-control" id="password" required>
+					<label class="form-control-placeholder  text-dark" for="password">Password</label>
+					<span *ngIf="isValid('password')">Password is a mandatory field</span>
+				</div>
+				<button [disabled]="!myForm.valid" class="btn btn-primary btn-block btn-lg mt-1 mb-2" (click)="register()">
+					<a class="button_text" >Sign In <i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+				</button>
+			</div>
+		</div>
+	</div>
+		{{myForm.valid}}
+</form>

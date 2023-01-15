@@ -1,0 +1,94 @@
+<div class="container-fluid full_bg">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline"><h2 class="menuclass cursive">Menu</h2></span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="/adminhome" class="nav-link align-middle px-0">
+                             <span class="ms-1 d-none d-sm-inline text-light cursive"><i class="fa-solid fa-house-user homeicon"></i>&nbsp;Home </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline text-light cursive "><i class="fa-solid fa-gauge homeicon"></i>&nbsp;Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="/audiolist" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-light cursive "><i class="fa-solid fa-microphone homeicon"></i>&nbsp;Manage Audios</span></a>
+                    </li>
+                    
+                    
+
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <!-- <a href="" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-house-lock home-icon"></i>
+                        &nbsp;<span class="d-none d-sm-inline mx-1" >Logout</span>
+                    </a> -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="admin_home_content">
+                <h2 class="text-dark heading cursive"><br>Edit Audio Details</h2>
+                <div class="form-body ">
+                    <div class="row">
+                        <div class="form-holder">
+                            <div class="form-content bg-dark">
+                                <div class="form-items">
+
+                                    <form [formGroup]="editForm">
+                                        <div class="col-md-12">
+                                            <label>Track Title</label>
+                                            <input type="text" formControlName="title" >
+                                            <span *ngIf="isValid('title')">Track Title is a mandatory field</span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Category</label>
+                                            <select class=""   formControlname="category" required>
+                                               
+                                                <option value="jweb">Hip hop music</option>
+                                                <option value="sweb">Pop music</option>
+                                                <option value="pmanager">Classical music</option>
+                                                <option value="pmanager">Electronic Dance Music</option>
+                                                <option value="pmanager">Rock Music</option>
+                                                
+                                         </select>
+                                         <span *ngIf="isValid('category')">Track Title is a mandatory field</span>
+                                            
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Author</label>
+                                            <input type="text" formControlName="author" >
+                                            <span *ngIf="isValid('author')">Track Title is a mandatory field</span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Image</label>
+                                            <input type="text" formControlName="image" >
+                                            <span *ngIf="isValid('image')" class="text-light">Track Title is a mandatory field</span>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <br><button [disabled]="!editForm.valid" (click)="edit()">Save</button>
+                                        </div>
+                                        {{editForm.valid}}
+                                    </form>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
+        </div>
+    </div>
+</div>
+

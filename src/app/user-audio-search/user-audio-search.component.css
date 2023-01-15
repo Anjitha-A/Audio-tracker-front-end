@@ -1,0 +1,54 @@
+.user-body:first-child{
+    background-color:black;
+  height: 50rem;
+    width: 100%;
+}
+
+
+  
+  /* Height for devices larger than 576px */
+  @media (min-width: 992px) {
+    #introCarousel {
+      margin-top: -58.59px;
+    }
+  }
+  
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+  .navbar{
+      height: 60px;
+      
+  }
+
+  .cursive {
+    font-family: cursive;
+    
+  }
+  .heading-alignment{
+      text-align: center;
+      margin-top: 40px;
+  }
+  .homeicon{
+    color: white;
+    size: 5px;
+}
+.cards-area{
+    margin-top: 50px;
+}
+.search-icon{
+    margin-top: 80px;
+}
+.rating-star{
+  /* margin-left: 225px; */
+  color: green;
+}
+
+
+a{
+    color:white;
+}
+.one-card{
+    margin-left: 500px;
+    width: 200px;
+}

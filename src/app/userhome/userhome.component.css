@@ -1,0 +1,82 @@
+.user-body:first-child{
+    background-color:black;
+ 
+    width: 100%;
+}
+
+
+  
+  /* Height for devices larger than 576px */
+  @media (min-width: 992px) {
+    #introCarousel {
+      margin-top: -58.59px;
+    }
+  }
+  
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+  .navbar{
+      height: 60px;
+      
+  }
+
+  .cursive {
+    font-family: cursive;
+    
+  }
+  .heading-alignment{
+      text-align: center;
+      margin-top: 40px;
+  }
+  .homeicon{
+    color: white;
+    size: 5px;
+}
+.cards-area{
+    margin-top: 90px;
+}
+.search-icon{
+    margin-top: 80px;
+}
+.rating-star{
+  /* margin-left: 225px; */
+  color:rgb(255, 255, 170);
+}
+
+
+a{
+    color:white;
+}
+
+.card-img-top{
+  width: 270px;
+  height: 198px;
+
+}
+ngb-rating {
+  color: #248a35;
+  font-size: 28px;
+}
+
+.btn_align{
+  margin-left: 57px;
+}
+.track_name_align{
+  margin-left: 18px;
+}
+
+.rating{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+i{
+  color: rgb(190, 187, 187);
+  cursor: pointer;
+}
+
+.active{
+  color: orange;
+}

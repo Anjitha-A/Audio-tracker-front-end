@@ -1,0 +1,84 @@
+<div class="container-fluid user-body">
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+            </ul>
+    
+            <ul class="navbar-nav list-inline">
+              <!-- Icons -->
+              <li class="">
+               
+             
+              
+              <li class="nav-item">
+                <button class="bg-dark"  (click)="logout()">
+                  <a class="nav-link homeicon" >Logout
+                    <i class="fa-solid fa-user homeicon fa-2xl"></i>
+                  </a>
+                </button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+      <div class="container user-body">
+          <div class="heading1">
+            
+              <h1 class="text-light cursive heading-alignment">  <i class="fa-solid fa-music homeicon  fa-xl"></i>&nbsp;Audio Tracker</h1>
+          </div>
+          <!-- <form  [formGroup]="searchForm"class="d-flex search-icon" role="search">
+            <input class="form-control me-2 bg-dark text-light" type="search" formControlName="track_id"placeholder="Search With Track Id" aria-label="Search">
+            
+                <button class=" btn btn-dark cursive" (click)="search()">
+                    <a href="">Search&nbsp;<i class="fa-solid fa-magnifying-glass"></i></a>
+                </button>
+            
+            
+          </form> -->
+      
+
+          <div class="cards-area">
+           
+                <div class="row">
+                   
+                    <div class="card col-3 m-2" *ngFor="let audio of audios"  style="width: 18rem;">
+                        <img  class="card-img-top" alt="..." [src]="audio.image">
+                        <div class="card-body">
+                          <p class="card-title cursive btn_align"> <b>Track id : {{audio.track_id}}</b></p>
+                          <p class="card-text cursive track_name_align"><b>Track name : {{audio.title}}</b> </p>
+                          <!-- <p class="card-text cursive track_name_align"><b> Category : {{i.category}}</b></p>
+                          <p class="card-text cursive track_name_align"><b>Author : {{i.author}}</b> </p> -->
+                          <button class="btn btn-dark cursive btn_align" (click)="viewDetails(audio.track_id)">View Details</button>
+                          <!-- <button class="btn btn-dark cursive btn_align"><a href="/user-audio-details/${track_id}">View Details</a></button>&nbsp; -->
+                          <!-- <div class="rating">
+                            <ng-container *ngFor="let i of stars">
+                              <br><i class="fa-solid fa-star" (click)="updateRating(i)" [ngClass]="{'active':i<=rating}" ></i>
+                            </ng-container>
+                          </div> -->
+                          <!-- <button class="btn btn-dark cursive">
+                             <i class="fa-solid fa-star fa-xs rating-star "></i>
+                             <i class="fa-solid fa-star  fa-xs rating-star "></i>
+                             <i class="fa-solid fa-star fa-xs  rating-star "></i>
+                             <i class="fa-solid fa-star fa-xs rating-star "></i>
+                             <i class="fa-solid fa-star fa-xs rating-star "></i>
+                          </button> -->
+                          
+                          <!-- <ngb-rating [max]="5" class="btn_align"  [(rate)]="starRating" [readonly]="false"></ngb-rating> -->
+
+                           
+                        </div>
+                      </div>
+                </div>
+          </div>
+      </div>   
+</div>

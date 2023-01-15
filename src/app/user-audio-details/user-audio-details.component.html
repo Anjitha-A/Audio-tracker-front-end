@@ -1,0 +1,59 @@
+<div class="container-fluid user-body">
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+            </ul>
+    
+            <ul class="navbar-nav list-inline">
+              <!-- Icons -->
+              <li class="">
+                  <!-- homeicon -->
+                <li class="nav-item">
+                    <a  href="/userhome" class="nav-link homeicon" >
+                        <i class="fa-solid fa-house-user homeicon fa-2xl"></i>
+                    </a>
+                  </li>
+             
+              <!-- profile icon -->
+              <li class="nav-item">
+                <a class="nav-link homeicon" >
+                    <i class="fa-solid fa-user homeicon fa-2xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+      <div class="container user-body">
+          <div class="heading1">
+            
+              <h1 class="text-light cursive heading-alignment">  <i class="fa-solid fa-music homeicon  fa-xl"></i>&nbsp;Audio Tracker</h1>
+          </div>
+        
+          <div class="cards-area">
+            
+                    <div class="one-card" style="width: 18rem;">
+                        <img [src]="audio.image" class="card-img-top" alt="...">
+                        <div class="card-body bg-dark">
+                          <p class="card-text text-light  text cursive">Track ID : {{audio.track_id}}</p>
+                          <p class="card-text text-light text cursive">Track Name : {{audio.title}}</p>
+                          <p class="card-text text-light text cursive">Category : {{audio.category}}</p>
+                          <p class="card-text text-light text cursive">Author :{{audio.author}}</p>
+                        </div>
+                      </div> 
+                         
+                </div>
+               
+      </div>
+      
+</div>
+
